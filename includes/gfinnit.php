@@ -1,19 +1,18 @@
 <?php
 	// innit host info
-	//define("HOST_URL","http://tienichgiadinh.vn");
-	define("HOST_URL","http://localhost/dothosondong");
+	define("HOST_URL","http://dothosondong.us/");
 	define("HOSTNAME","localhost");
-	define("DB_USERNAME","root");
-	define("DB_PASSWORD","");
-	define("DB_DATANAME","dothotuongphat");
+	define("DB_USERNAME","root");//dotho
+	define("DB_PASSWORD","");//2Xbul=jm2pSc
+	define("DB_DATANAME","dotho_dothotuongphat");
 	// innit com_language
 	define("IS_ACTIVE_LANG",true);
 	// innit site
-	define("TITLE_SITE","GFCMS");
-	define("Meta_DESC","GLOWFUTURE");
-	define("Meta_KEY","GLOWFUTURE,GlowFuture,Glowfuture,glowfuture");
+	define("TITLE_SITE","Đồ thờ Sơn Đồng");
+	define("Meta_DESC","Đồ thờ Sơn Đồng");
+	define("Meta_KEY","Đồ thờ Sơn Đồng,Đồ thờ sơn đồng,đồ thờ sơn đồng,do tho son dong");
 	
 	
-	define("URLEDITOR","http://localhost/dothosondong/");
-	define("WEBSITE","http://localhost/dothosondong/");
+	define("URLEDITOR","http://dothosondong.us/");
+	define("WEBSITE","http://dothosondong.us/");
 ?>

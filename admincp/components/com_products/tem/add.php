@@ -111,4 +111,107 @@ $(document).ready(function() {
       </script>
     <input type="submit" name="cmdsave" id="cmdsave" value="Submit" style="display:none;">
   </form>
+    <fieldset>
+		<legend><strong>Gán sự kiện</strong></legend>
+		<?php 
+			$strwhere = " and `pro_id` = $proid ";
+			if(!isset($objeventdetail)) $objeventdetail = new CLS_EVENT_DETAIL();
+			$objeventdetail->getAllList($strwhere);
+			$total_rows=$objeventdetail->Numrows();
+			if($total_rows>0)
+			{
+				$objeventdetail->getProByCataID($proid);
+		?>
+		<a href="index.php?com=event_detail&task=edit&id=<?php echo $objeventdetail->ID; ?>" >Cập nhật</a><br />
+		<a href="index.php?com=event_detail&task=delete&id=<?php echo $objeventdetail->ID; ?>" >Xóa</a>
+		<table width="100%" border="0" cellspacing="1" cellpadding="3">
+		  <tr>
+			<td width="127" align="right" bgcolor="#EEEEEE"><strong><?php echo CCATALOG;?><font color="red">*</font></strong></td>
+			<td width="308">
+				<?php echo $objeventdetail->getEventName($objeventdetail->EventID); ?>
+			  </td>
+		   <td align="right" bgcolor="#EEEEEE"><strong>Số lượng</strong></td>
+			<td colspan="3"><?php echo $objeventdetail->Quantity; ?>
+			</tr>
+		  <tr>		  
+		   <td width="191" align="right" bgcolor="#EEEEEE"><strong>Ngày bắt đầu</strong></td>
+			<td width="297"><?php echo date("d-m-Y",strtotime($objeventdetail->Start_date));  ?></td>
+			<td width="191" align="right" bgcolor="#EEEEEE"><strong>Ngày kết thúc</strong></td>
+			<td width="297"><?php echo date("d-m-Y",strtotime($objeventdetail->End_date));  ?></td>
+			</tr>
+		   <tr>
+		   
+		   <td align="right" bgcolor="#EEEEEE"><strong>Giá cũ </strong></td>
+			<td><?php echo $objeventdetail->Old_price;?></td>
+			<td align="right" bgcolor="#EEEEEE"><strong>Giá mới</strong></td>
+			<td><?php echo $objeventdetail->Cur_price;?></td>
+			</tr>
+		</table>
+
+		<?php }
+		else
+		echo '<a href="index.php?com=event_detail&task=add&proid='.$proid.'">Gán sự kiện</a>';
+		?>
+	</fieldset>
+  <br />
+	<fieldset>
+		<legend><strong>Ảnh sản phẩm</strong></legend>
+			<a href="index.php?com=images&task=add&proid=<?php echo $proid; ?>">Thêm ảnh sản phẩm</a>
+		<table width="100%" border="0" cellspacing="0" cellpadding="3" class="list">
+			<tr class="header">
+				<td>STT</td>
+				<td>Ảnh</td>
+				<td>Hiển thị</td>
+				<td>Sửa</td>
+				<td>Xóa</td>
+			</tr>
+			<?php 
+			$strwhere = " `pro_id` = $proid ";
+			if(!isset($objimages)) $objimages = new CLS_IMAGES();
+			$objimages->getAllList($strwhere);
+			$total_rows=$objimages->Numrows();
+			$objimages->listTablePro($strwhere);
+			?>
+		</table>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="Footer_list">
+			  <tr>
+				<td align="center">
+				<?php 
+					//paging($total_rows,MAX_ROWS,$cur_page);
+				?>
+				</td>
+			  </tr>
+		</table>
+	</fieldset>
+	<br />
+	<fieldset>
+		<legend><strong>Thông số kĩ thuật</strong></legend>
+			<a href="index.php?com=property&task=add&proid=<?php echo $proid; ?>">Thêm thông số kĩ thuật sản phẩm</a>
+		<table width="100%" border="0" cellspacing="0" cellpadding="3" class="list">
+			<tr class="header">
+				<td>STT</td>
+				<td>Tên</td>
+				<td>Mô tả</td>
+				<td>Hiển thị</td>
+				<td>Sửa</td>
+				<td>Xóa</td>
+			</tr>
+			<?php 
+			$strwhere = " `product_id` = $proid ";
+			if(!isset($objproperty)) $objproperty = new CLS_PROPERTY();
+			$objproperty->getAllList($strwhere);
+			$total_rows=$objproperty->Numrows();
+			$objproperty->listTablePro($strwhere);
+			?>
+		</table>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="Footer_list">
+			  <tr>
+				<td align="center">
+				<?php 
+					//paging($total_rows,MAX_ROWS,$cur_page);
+				?>
+				</td>
+			  </tr>
+		</table>
+	</fieldset>
 </div>

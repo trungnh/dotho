@@ -1,7 +1,6 @@
 <?php
 class CLS_MYSQL{
-	var $pro=array("hostname"=>"localhost","username"=>"samhanquoc_igf","password"=>"LSL1dnjz","dataname"=>"samhanquoc_igf");
-	//var $pro=array("hostname"=>"localhost","username"=>"root","password"=>"","dataname"=>"samhanquoc");
+	var $pro=array("hostname"=>"localhost","username"=>"dotho","password"=>"2Xbul=jm2pSc","dataname"=>"dotho_dothotuongphat");
 	
 	var $dbconn=NULL;
 	var $result;

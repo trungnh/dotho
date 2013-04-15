@@ -66,7 +66,7 @@ else
 {xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");}
 xmlhttp.onreadystatechange=function()
 {if(xmlhttp.readyState==4&&xmlhttp.status==200)
-{document.getElementById("shopcart").innerHTML=xmlhttp.responseText;window.location="http://localhost/dothosondong/viewcart.html";}}
+{document.getElementById("shopcart").innerHTML=xmlhttp.responseText;window.location="http://dothosondong.us/viewcart.html";}}
 xmlhttp.open("GET",url,true);xmlhttp.send();}
 function showdate(){var mydate=new Date()
 var year=mydate.getYear()

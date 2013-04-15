@@ -202,7 +202,7 @@ $(document).ready(function() {
 		</table>
 	</fieldset>
 	<br />
-	
+	<fieldset>
 		<legend><strong>Thông số kĩ thuật</strong></legend>
 			<a href="index.php?com=property&task=add&proid=<?php echo $proid; ?>">Thêm thông số kĩ thuật sản phẩm</a>
 		<table width="100%" border="0" cellspacing="0" cellpadding="3" class="list">

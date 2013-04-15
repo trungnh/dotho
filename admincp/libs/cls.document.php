@@ -254,7 +254,7 @@ class CLS_DOCUMENT extends CLS_MYSQL{
 	}
 
 	
-	function fileName($id,$HOST_URL="http://localhost/dothosondong"){
+	function fileName($id,$HOST_URL=HOST_URL){
 		$sql = "SELECT loai,code,urlfile FROM `view_document` WHERE `doc_id`=$id";
 		$objdata=new CLS_MYSQL();
 		$objdata->Query($sql);
