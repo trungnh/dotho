@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+.slidepad { position:relative; height:270px; width:430px; margin: 0 auto; overflow: hidden;}
+.slideshow {
+	position: absolute;	font-size:14px;
+}
+.slide { padding:5px;}
+.slideshow .slideitem {float: left; width:430px; height:250px; overflow:hidden}
+
+/*--Paging Styles--*/
+.slide_paging {
+    display: none;
+    position: absolute; z-index: 100;
+    right: 53px; bottom:3px;
+    text-align: center;
+}
+.slide_paging a {
+	 margin: 0px 2px;
+	height:10px; width:10px;
+	text-decoration: none; font-weight: bold; 
+	background:url(../images/bulett.png) no-repeat bottom right;
+	float:left;
+}
+.slide_paging a.active {
+		 background:url(../images/bulett-active.gif) no-repeat bottom right;
+		 height:10px; width:10px;
+}
+.slide_paging a:hover {font-weight: bold;}
+.slideitem img{ width: 430px;}

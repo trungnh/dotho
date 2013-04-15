@@ -1,0 +1,20 @@
+RewriteEngine on
+RewriteRule ^article/([0-9]*)-(.*).html index.php?com=contents&viewtype=article&cur_menu=57&item=$1
+RewriteRule ^article/([0-9]*)-(.*).html index.php?com=contents&viewtype=article&item=$1
+RewriteRule ^block/([0-9]*)-(.*).html index.php?com=contents&viewtype=block&cur_menu=59&catid=$1
+RewriteRule ^danhmuc/([0-9]*)-(.*).html index.php?com=catalogs&ItemID=$1
+RewriteRule ^(.*)danhmuc-sanpham.html index.php?com=catalogs
+RewriteRule ^([0-9]*)/(.*).html index.php?com=products&ItemID=$1
+RewriteRule ^khuyenmai/([0-9]*)/(.*).html index.php?com=event&itemID=$1
+RewriteRule ^khuyenmai-([0-9]*)-([0-9]*)-(.*).html index.php?com=event&itemID=$1&item=$2
+RewriteRule ^(.*)register.html index.php?com=users&viewtype=add
+RewriteRule ^(.*)edit.html index.php?com=users&viewtype=edit
+RewriteRule ^(.*)changepass.html index.php?com=users&viewtype=changepass
+RewriteRule ^(.*)logout.html index.php?com=users&viewtype=logout
+RewriteRule ^(.*)login.html index.php?com=users&viewtype=login
+RewriteRule ^(.*)checkout.html index.php?com=cart&do=checkout
+RewriteRule ^(.*)viewcart.html index.php?com=cart&do=viewcart
+RewriteRule ^(.*)removeall.html index.php?com=cart&do=removeall
+RewriteRule ^(.*)remove-([0-9]*)-(.*).html index.php?com=cart&do=remove&cartID=$2&sp=$1
+
+

@@ -1,0 +1,27 @@
+<?php
+	require_once(libs_path."/gfclass/cls.data.php");
+	require_once(libs_path."/gfclass/cls.language.php");
+	require_once(libs_path."/gfclass/cls.general.php");
+	require_once(libs_path."/gfclass/cls.template.php");
+	require_once(libs_path."/gfclass/cls.component.php");
+	require_once(libs_path."/gfclass/cls.comment.php");
+	require_once(libs_path."/gfclass/cls.module.php");
+	require_once(libs_path."/gfclass/cls.category.php");
+	require_once(libs_path."/gfclass/cls.content.php");
+	require_once(libs_path."/gfclass/cls.menu.php");
+	require_once(libs_path."/gfclass/cls.menuitem.php");
+	require_once(libs_path."/gfclass/cls.users.php");
+	require_once(libs_path."/gfclass/cls.catalogs.php");
+	require_once(libs_path."/gfclass/cls.configsite.php");
+	require_once(libs_path."/gfclass/cls.product.php");
+	require_once(libs_path."/gfclass/cls.document.php");
+	require_once(libs_path."/gfclass/cls.order.php");
+	require_once(libs_path."/gfclass/cls.order_detail.php");
+	require_once(libs_path."/gfclass/cls.guser.php");
+	require_once(libs_path."/gfclass/cls.images.php");
+	require_once(libs_path."/gfclass/cls.property.php");
+	require_once(libs_path."/gfclass/cls.event.php");
+	require_once(libs_path."/gfclass/cls.event_detail.php");
+ 	require_once(libs_path."/gfclass/cls.email.php");
+	
+?>

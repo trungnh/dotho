@@ -1,0 +1,44 @@
+<h4>Contact Me</h4>
+<form action="http://symplicity.7loops.com/contact.php" method="post" id="contact_form">
+	<div class="section">
+		<label for="name">Your Name:</label>
+		<input type="text" name="name" id="name" value="" tabindex="1" class="required" />
+	</div>
+	<div class="section">
+		<label for="email">Your Email:</label>
+		<input type="text" name="email" id="email" value="" tabindex="2" class="required" />
+	</div>
+	<div class="section">
+		<label for="message">Message:</label>
+		<textarea cols="40" rows="8" name="message" id="message" class="required"></textarea>
+	</div>
+	<div id="loader">
+		<input type="submit" value="Submit" />
+	</div>
+</form>
+<script type="text/javascript">
+	$(function(){
+		$("#contact_form").validate({
+	        submitHandler: function(e){
+				e.preventDefault();
+				
+				var form = $(this);
+				var post_url = form.attr('action');
+				var post_data = form.serialize();
+				
+				$('#loader', form).html('<img src="img/loading.gif" /> Please Wait...');
+				
+				$.ajax({
+					type: 'POST',
+					url: post_url,
+					data: post_data,
+					success: function(msg) {
+						$(form).fadeOut(500, function(){
+							form.html(msg).fadeIn();
+						});
+					}
+				});
+			}
+		});
+	});
+</script>

@@ -1,0 +1,111 @@
+@media (min-width: 980px) {
+  .top-container, .before_footer {
+    /*width: 980px;*/
+  }
+.login p input.check{ width: auto !important; margin: 3px 0 0 8px;}
+.header_right{ width: 757px;}
+.module-event{ width: 140px;}
+.login{width: 378px;}
+.login input{ width: 135px;}
+.login p label{ margin: 0 0px 0 6px;}
+.module-xe{margin:10px 0 0 0px !important;}
+.login p{ margin: 6px 0px 8px 8px;}
+#box-textarea-search {
+width: 565px;
+}
+ #content .product-view #product-shop-view-content {
+    width: 440px;
+  }
+  .home > .main {
+    width: 670px;
+  }
+  .home > #main-content .banner {
+    width: 490px;
+    min-height: 240px;
+    overflow: hidden;
+  }
+  .home > .main .list-griditem .griditem {
+    width: 230px;
+  }
+  .home > .container-banner-home .category-products {
+    width: 328px;
+  }
+  .home > .container-banner-home #categories-banner .category-products .item-product {
+    width: 313px;
+  }
+  .footer-container .recently-products .carouselcus-wrap {
+    width: 900px;
+  }
+  .recently-products .item-product {
+    width: 225px;
+  }
+}
+@media (min-width: 1200px) {
+  .top-container, .before_footer {
+    width: 1238px;
+  }
+.mod-sales .img-sales{width: 94%;}
+.mod-sales{ background: url("../images/icon_gold.png") no-repeat scroll 18px top;}
+.sales-left{ width: 34%;}
+.breadcrumbs .bread-right{ right: 0px;}
+.login p input.check{ width: auto !important; margin: 1px 0 0 8px;}
+.header_right{ width: 1015px;}
+.login{width: 470px;}
+.login input{ width: 160px;}
+.login p{ margin: 6px 0px 8px 8px;}
+.login p label{ margin: 0 0px 0 6px;}
+.module-xe{margin:10px 0 0 50px !important; width: auto;}
+  #box-textarea-search {
+    width: 825px;
+  }
+  #content .product-view #product-shop-view-content {
+    width: 680px;
+  }
+  .home > .main {
+    width: 925px;
+  }
+  .home > #main-content .banner {
+    width: 730px;
+    min-height: 240px;
+    overflow: hidden;
+  }
+  .home > .main .list-griditem .griditem {
+    width: 230px;
+  }
+  .home > .container-banner-home .category-products {
+    width: 568px;
+  }
+  .home > .container-banner-home #categories-banner .category-products .item-product {
+    width: 174.33333333333px;
+  }
+  .footer-container .recently-products .carouselcus-wrap {
+    width: 1140px;
+  }
+  .recently-products .item-product {
+    width: 228px;
+  }
+  .row {
+    margin-left: -20px;
+    *zoom: 1;
+  }
+  .row:before, .row:after {
+    display: table;
+    content: "";
+  }
+  .row:after {
+    clear: both;
+  }
+  [class*="span"] {
+    float: left;
+    margin-left: 20px;
+  }
+  .span12, .container {
+    width: 1240px;
+  }
+  .thumbnails {
+    margin-left: -20px;
+  }
+  .thumbnails > li {
+    margin-left: 20px;
+  }
+}

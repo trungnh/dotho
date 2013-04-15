@@ -1,0 +1,88 @@
+/*** Tooltip ***/
+
+#tooltip{
+	position:absolute;
+	z-index:99000;
+        padding-left: 11px;
+/*        background: url('../images/tooltip_narrow_left.png') top left no-repeat;*/
+        background-position: 0px 10px;
+
+}
+#tooltip.viewport-right{
+       padding-left: 0px;
+       padding-right: 11px;
+/*       background: url('../images/tooltip_narrow_right.png') top left no-repeat;*/
+}
+#tooltip .body{
+	background:#FFFFFF;
+	border:1px #f8dbb9 solid;
+/*	border-radius:0.5em;
+	-moz-border-radius:0.5em;*/
+
+}
+#tooltip .name{
+	color:#333333;
+	font-weight:bold;
+	overflow:hidden;
+	text-align:left;
+        padding: 0 0 0 15px;
+        background: url('../images/tooltip_header_bg.png') bottom left repeat-x;
+        line-height: 32px;
+        width: 301px;
+        margin:0 0 5px 0;
+}
+#tooltip .name p{
+        margin:0 ;
+        padding:0;
+        height: 32px;
+        overflow:hidden;
+}
+
+ #tooltip.tooltip_product .picture_only{
+	text-align:center;
+        margin: 20px;
+}
+#tooltip.tooltip_product .label-row{
+        width:125px;
+        padding: 3px  0 0 10px;
+}
+#tooltip.tooltip_product .value-row{
+        width: 165px;
+        padding: 3px 5px 0 0;
+}
+#tooltip.tooltip_product .value-row span.value{
+        float:right;
+        width: 95%;
+}
+#tooltip.tooltip_product .value-row .old-price .price-label,
+#tooltip.tooltip_product .value-row  .special-price .price-label{
+    display: none;
+}
+#tooltip.tooltip_product .value-row div,
+#tooltip.tooltip_product .value-row p,
+#tooltip.tooltip_product .value-row span,
+#tooltip.tooltip_product .value-row .rating{
+    margin-bottom: 0px;
+    padding: 0px;
+}
+#tooltip.tooltip_product .value-row .rating{
+
+}
+#tooltip.tooltip_product .value-row .rating .ratings .amount,
+#tooltip.tooltip_product .value-row .comment .ratings .rating-box{
+    display: none;
+}
+#tooltip.tooltip_product .value-row .comment .ratings .rating-box,
+#tooltip.tooltip_product .value-row .rating{
+    line-height: 13px;
+    height: 13px;
+}
+a#tooltip-tags{
+    text-decoration: none;
+}
+a#tooltip-tags:hover{
+    cursor: pointer;
+    color: #990000;
+    text-decoration: none;
+}
+/*-- End Tooltip --*/
