@@ -4,7 +4,7 @@
 	define("HOSTNAME","localhost");
 	define("DB_USERNAME","root");//dotho
 	define("DB_PASSWORD","");//2Xbul=jm2pSc
-	define("DB_DATANAME","dotho_dothotuongphat");
+	define("DB_DATANAME","dothotuongphat");
 	// innit com_language
 	define("IS_ACTIVE_LANG",true);
 	// innit site

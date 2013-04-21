@@ -1,86 +1,94 @@
-<?php
-/*
-require_once(libs_path."gfclass/cls.simple_image.php");
-
-if(!isset($clsimage)) $clsimage = new SimpleImage();
-if(!isset($objcon)) $objcon = new CLS_CONTENTS();
-$objcon->getList($objmodule->CatID," ORDER BY `order` ASC");
-?>
-<div class="slide">
-    <div class="slidepad">
-        <div class="slideshow">
-            <?php if($objmodule->ViewTitle==1)
-            {?>
-            	<h3 class="title"><?php echo $objmodule->Title;?></h3>
-            <?php 
-            }
-            $n = $objcon->Numrows();
-            while($rows = $objcon->FetchArray()) {
-                $intro = stripslashes(uncodeHTML($rows["fulltext"]));
-                $link = WEBSITE.'article/'.$rows["con_id"]."-".$rows["title"].".html";
-                echo '<div class="slideitem">'.$intro.'</div>';
-            } 
-            ?>
-        </div>
-        <div class="slide_paging" style="display: block;">
-			<?php 
-            for($i=1;$i<=$n;$i++) { 
-                if($i==1)
-                    echo '<a rel="'.$i.'" href="#" class="active"></a>';
-                else
-                    echo '<a rel="'.$i.'" href="#" class=""></a>';
-            } ?>
-        </div>
-    </div>
-    
-</div>
-
-<?php
-unset($objcon);
-unset($objmodule);
-unset($clsimage);
- * 
- */
-?>
-<script src="jquery.nivo.slider.pack.js" type="text/javascript"></script>
 <script type="text/javascript">
-
-$(document).ready(function() {
-
-    $('#slidernivo').nivoSlider({
-
-        effect: 'random', // Specify sets like: 'fold,fade,sliceDown'
-
-        slices: 15, // For slice animations
-
-        boxCols: 8, // For box animations
-
-        boxRows: 4, // For box animations
-
-        animSpeed: 500, // Slide transition speed
-
-        pauseTime: 3000 // How long each slide will show
-
-        
-
-    });
-
-});
-
+var vtemslideshow = jQuery.noConflict();
+(function($) {
+	$(document).ready(function(){
+		$('#slideshow1').jqFancyTransitions({ 
+		
+		strips: 10,
+		delay: 5000,
+		stripDelay: 50,
+		titleOpacity: 0.7,
+		titleSpeed: 1000,
+		position: 'bottom',
+		direction: 'fountainAlternate',
+		effect: '',
+		navigation: true,
+		links : 0});
+	});
+})(jQuery);
 </script>
 
-<div class="sliderwrapper">
+<style type="text/css">
+.vtem_wapper{
+	position:relative;
+	border:0px solid #F5F5F5;
+	overflow:hidden;
+}
 
-<div id="slidernivo" class="container nivoSlider">
+.slidemain .ft-title{
+	display:none;
+}
 
-    <img src="<?php echo WEBSITE.THIS_TEM_PATH; ?>images/s1.jpg" alt="SteelViet" height="180" width="540" />
 
-    <img src="<?php echo WEBSITE.THIS_TEM_PATH; ?>images/s7.jpg" alt="SteelViet" height="180" width="540" />
+.ft-prev,.ft-next{
+	color:#333 !important;
+	font-weight:bold !important;
+	padding:4px;
+	text-indent:-999999px;
+	width:30px;
+	display:none;
+	visibility:hidden
+}
 
-    <img src="<?php echo WEBSITE.THIS_TEM_PATH; ?>images/s5.jpg" alt="SteelViet" height="180" width="540" />
+.ft-prev{
+	background:url(images/go_style4.png) right top no-repeat;
+	_background:#f5f5f5;
+	left:8px !important;
+}
 
-    <img src="<?php echo WEBSITE.THIS_TEM_PATH; ?>images/s6.jpg" alt="SteelViet" height="180" width="540" />
+.ft-prev:hover{
+	background-position:right bottom;
+}
 
+.ft-next{
+	background:url(images/go_style4.png) left top no-repeat;
+	_background:#f5f5f5;
+	right:8px !important;
+}
+
+.ft-next:hover{
+	background-position:left bottom;
+}
+
+.vtem_button{
+	position:absolute;
+	left:0;
+	bottom:0;
+	margin:10px;
+}
+
+.vtem_button div{
+	height:30px; line-height:27px; margin:0; padding:0;
+}
+
+.vtem_button div a{
+	background:url(images/style4.png) center 0 no-repeat;
+	padding:5px 9px;
+	margin:2px;
+	font-weight:bold;
+	text-decoration:none !important;
+}
+
+.ft-button-slideshow1-active{
+	color:#cc0000 !important;
+}
+</style>
+
+<div class="vtem_wapper nav_style4" style="clear:both;">
+	<div id="slideshow1" class="slidemain">
+		<img src='images/slider/1.jpg' alt='VTEM Slideshow' />
+		<img src='images/slider/2.jpg' alt='VTEM Slideshow' />
+		<img src='images/slider/3.jpg' alt='VTEM Slideshow' />
+		<img src='images/slider/4.jpg' alt='VTEM Slideshow' />
+	</div>
 </div>
-
-</div><!-- end slider -->

@@ -81,7 +81,7 @@ if(isset($_GET["com"])){
 		<script type="text/javascript" src="<?php echo WEBSITE; ?>js/jquery_004.js"></script>
 		<script type="text/javascript" src="<?php echo WEBSITE; ?>js/carousel.js"></script>
 		<script type="text/javascript" src="<?php echo WEBSITE.THIS_TEM_PATH; ?>js/jquery.lightbox-0.5.js"></script>
-		<script type="text/javascript" src="<?php echo WEBSITE.THIS_TEM_PATH; ?>js/jquery.nivo.slider.pack.js"></script>
+		<script type="text/javascript" src="<?php echo WEBSITE;?>js/slideshow.js"></script>
 		<script type="text/javascript">/*
 		strTooltipProductOb= (typeof(strTooltipProductOb) == "undefined" ? ".list_product pre," : strTooltipProductOb + ".list_product pre,");
 		strTooltipProductOb= (typeof(strTooltipProductOb) == "undefined" ? ".list_order_item pre," : strTooltipProductOb + ".list_order_item pre,");

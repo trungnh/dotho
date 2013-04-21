@@ -140,7 +140,7 @@ p.price-cur { color: #f26622; font-weight: bold; font-size: 12px;}
 #catalogs_listpro{ clear: both;}
 .slideshow{  margin:0px auto; width: 130%; }
 #hien{ width: 980px; margin: 0 auto; position: relative;}
-#slider{ margin:  0px auto 0 auto !important;}
+#slider{ margin:  0px auto 0 auto !important; float: left;}
 .nivoSlider{ margin: 0 auto;}
 .contenttop{ margin: 0 0 15px 0;}
 .content-content1{ border: 1px solid #DDDDDD; border-radius: 4px 4px 4px 4px; width: 100%; margin: 0; padding: 15px 0;}
