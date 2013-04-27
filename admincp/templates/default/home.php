@@ -8,7 +8,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Trung tâm đào tạo tin học GlowFuture</title>
+<title>Quản trị Website</title>
 
 <link href="<?php echo THIS_TEM_ADMIN_PATH; ?>css/gfstyle.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php echo THIS_TEM_ADMIN_PATH; ?>css/jquery-ui.css" type="text/css" media="all" /> 

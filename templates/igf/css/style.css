@@ -639,7 +639,7 @@ tr a.delete_cart { float: left; margin: 0 10px 0 0;}
     width: 4px;
     z-index: 49000;
 }
-.rw-title{ font-weight: bold; font-size: 13px;}
+.rw-title{ font-weight: bold; font-size: 13px;margin-right: 15px;}
 .breadcrumbs ul {
     float: left;
     margin: -4px 0 0 10px;
@@ -733,7 +733,7 @@ tr a.delete_cart { float: left; margin: 0 10px 0 0;}
 #wapper-content, #inner { overflow: hidden;}
 .col-left-content{ float: left; width: 185px;}
 #narrow-by-list2{ padding: 0; margin: 0;}
-.rw-wrapper{ clear: both; display: inline-block; width: 100%;}
+.rw-wrapper{ clear: both; display: inline-block; width: 100%; margin:10px;}
 .block-layered-nav ol{ margin: 0; padding: 0;}
 #btn_show_right {
     border: 1px solid #DDDDDD;

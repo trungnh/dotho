@@ -122,7 +122,9 @@ if(!isset($objmod)) $objmod = new CLS_MODULE();
 	<div class="container">
 		<div id="header" class="clearfix">
 			<div class="header-left">
+                            <a href="<?php echo HOST_URL;?>">
 				<?php echo stripslashes(LOGO); ?>
+                            </a>
 			</div>
 			<div class="header_right clearfix user">   
                 <?php $this->loadModule("header");?>            
@@ -182,6 +184,7 @@ if(!isset($objmod)) $objmod = new CLS_MODULE();
 								?>
 							</div>
 							<a class="writecontact" href="#">Viết góp ý</a>
+                                                        
 						</div>
 					</div> 
 					<?php 

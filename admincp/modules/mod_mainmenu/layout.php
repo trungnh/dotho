@@ -45,7 +45,7 @@ $check_isadmin = $objuser->isAdmin();
             <ul class="submenu">
                 <li class="space"><a href="index.php?com=category"><span><?php echo MCATEGORY;?></span></a></li>
                 <li><a href="index.php?com=contents"><span><?php echo MARTICLE;?></span></a></li>
-                <li><a href="index.php?com=comment"><span><?php echo "Quản lý bình luận";?></span></a></li>
+                <!--<li><a href="index.php?com=comment"><span><?php echo "Quản lý bình luận";?></span></a></li>-->
             </ul>
         </li>
         <?php if($check_isadmin==true){ ?>

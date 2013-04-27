@@ -3,7 +3,8 @@ var vtemslideshow = jQuery.noConflict();
 (function($) {
 	$(document).ready(function(){
 		$('#slideshow1').jqFancyTransitions({ 
-		
+		width:735, 
+		height: 455,
 		strips: 10,
 		delay: 5000,
 		stripDelay: 50,
@@ -21,15 +22,20 @@ var vtemslideshow = jQuery.noConflict();
 <style type="text/css">
 .vtem_wapper{
 	position:relative;
+        width:735px;
 	border:0px solid #F5F5F5;
 	overflow:hidden;
+        margin-left: 2px;
 }
 
 .slidemain .ft-title{
 	display:none;
 }
 
-
+.item_photo,.slidemain{
+	width:713px;
+	height:455px;
+}
 .ft-prev,.ft-next{
 	color:#333 !important;
 	font-weight:bold !important;
@@ -81,6 +87,7 @@ var vtemslideshow = jQuery.noConflict();
 
 .ft-button-slideshow1-active{
 	color:#cc0000 !important;
+         
 }
 </style>
 
@@ -90,5 +97,10 @@ var vtemslideshow = jQuery.noConflict();
 		<img src='images/slider/2.jpg' alt='VTEM Slideshow' />
 		<img src='images/slider/3.jpg' alt='VTEM Slideshow' />
 		<img src='images/slider/4.jpg' alt='VTEM Slideshow' />
+                <img src='images/slider/5.jpg' alt='VTEM Slideshow' />
+		<img src='images/slider/6.jpg' alt='VTEM Slideshow' />
+		<img src='images/slider/7.jpg' alt='VTEM Slideshow' />
+		<img src='images/slider/8.jpg' alt='VTEM Slideshow' />
+                <img src='images/slider/9.jpg' alt='VTEM Slideshow' />
 	</div>
 </div>

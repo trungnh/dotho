@@ -15,7 +15,9 @@
 	require_once("includes/toolbar.php");
 	// End toolbar
 	$objproduct=new CLS_PRODUCTS();
-	
+	if(isset($_SESSION['CANCELNEWID'])&&$_SESSION['CANCELNEWID']!=""){
+            $objproduct->Delete($_SESSION['CANCELNEWID']);
+        }
 	if(isset($_POST["txttask"]) && $_POST["txttask"]==1)
 	{
 		$objproduct->Name=addslashes($_POST["txtname"]);

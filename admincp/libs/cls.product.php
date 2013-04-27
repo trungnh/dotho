@@ -14,10 +14,11 @@
 			"Fulltext"=>"",
 			"Iscan"=>"iscan",
 			"Unit"=>"",
-            "Sale"=>"0",
+                        "Sale"=>"0",
 			"LangID"=>"0",
 			"IsActive"=>"1" // khon co day , o day
 		);
+                var $lastProId;
 		var $result;
 		function CLS_PRODUCTS(){
 		}
@@ -219,6 +220,7 @@
 			$result=$objdata->Query($sql);
 			
 			$proid=$objdata->LastInsertID();
+                        $this->lastProId = $proid;
 			$sql="INSERT INTO tbl_products_text (`pro_id`,`intro`,`fulltext`,`name`,`unit`,`lag_id`) VALUES";
 			$sql.="('$proid','".($this->pro_product["Intro"])."','".($this->pro_product["Fulltext"])."','".($this->pro_product["Name"])."','";
 			$sql.=$this->pro_product["Unit"]."','".$this->pro_product["LangID"]."')";

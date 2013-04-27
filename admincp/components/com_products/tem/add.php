@@ -1,5 +1,10 @@
 <?php
 	defined("ISHOME") or die("Can't acess this page, please come back!");
+	$objproduct=new CLS_PRODUCTS();
+        $objproduct->Name = "Tên sản phẩm mới";
+        $objproduct->Add_new();
+        $proid = $objproduct->lastProId;
+        $_SESSION['CANCELNEWID'] = $objproduct->lastProId;
 ?>
 <div id="action">
  <script language="javascript">
@@ -47,7 +52,7 @@ $(document).ready(function() {
       <tr>
          <td align="right" bgcolor="#EEEEEE"><strong><?php echo CNAME;?> <font color="red">*</font></strong></td>
         <td>
-          <input name="txtname" type="text" id="txtname" size="45" value="" />
+          <input name="txtname" type="text" id="txtname" size="45" value="<?php echo "Tên sản phẩm mới";?>" />
           <label id="txtname_err" class="check_error"></label>
           <input name="txttask" type="hidden" id="txttask" value="1" />
           </td>
