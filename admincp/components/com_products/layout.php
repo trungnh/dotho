@@ -15,9 +15,7 @@
 	require_once("includes/toolbar.php");
 	// End toolbar
 	$objproduct=new CLS_PRODUCTS();
-	if(isset($_SESSION['CANCELNEWID'])&&$_SESSION['CANCELNEWID']!=""){
-            $objproduct->Delete($_SESSION['CANCELNEWID']);
-        }
+
 	if(isset($_POST["txttask"]) && $_POST["txttask"]==1)
 	{
 		$objproduct->Name=addslashes($_POST["txtname"]);
@@ -33,7 +31,7 @@
 		$objproduct->Old_price=addslashes($_POST["txtoldprice"]);
 		$objproduct->Cur_price=addslashes($_POST["txtcurprice"]);
         
-        $objproduct->Sale=round(100-(((int)$_POST["txtcurprice"] / (int)$_POST["txtoldprice"])*100));
+                $objproduct->Sale=round(100-(((int)$_POST["txtcurprice"] / (int)$_POST["txtoldprice"])*100));
         
 		$sproduct=addslashes($_POST['txtintro']);
 		$objproduct->Intro=$sproduct;
@@ -48,14 +46,18 @@
 		}
 		//
 		
-		if($objproduct->ID=="-1")
+		if(isset($_SESSION['NEWID']))
 		{
-			$result_action = $objproduct->Add_new();
+                        $objproduct->ID = $_SESSION['NEWID'];
+                        unset($_SESSION['NEWID']);
+			$result_action = $objproduct->Update();
 			if(!$result_action)
 				echo "<script language=\"javascript\">window.location='index.php?com=".COMS."&mess=A02'</script>";
 			else	
 				echo "<script language=\"javascript\">window.location='index.php?com=".COMS."&mess=A01'</script>";
-		}
+		
+                        return;
+                }
 		else{
 			$result_action = $objproduct->Update();
 			if(!$result_action)
@@ -111,6 +113,7 @@
 	{
 		case "add"	: include(THIS_COM_PATH."tem/add.php"); 	break;
 		case "edit"	: include(THIS_COM_PATH."tem/edit.php");	break;
+                case "cancel"	: include(THIS_COM_PATH."tem/cancel.php"); 	break;
 		case "active"	: include(THIS_COM_PATH."tem/active.php");	break;
 		case "delete"	: include(THIS_COM_PATH."tem/delete.php");	break;
 		default: include(THIS_COM_PATH."tem/list.php");

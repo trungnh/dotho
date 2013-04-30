@@ -82,32 +82,7 @@ if(isset($_GET["com"])){
 		<script type="text/javascript" src="<?php echo WEBSITE; ?>js/carousel.js"></script>
 		<script type="text/javascript" src="<?php echo WEBSITE.THIS_TEM_PATH; ?>js/jquery.lightbox-0.5.js"></script>
 		<script type="text/javascript" src="<?php echo WEBSITE;?>js/slideshow.js"></script>
-		<script type="text/javascript">/*
-		strTooltipProductOb= (typeof(strTooltipProductOb) == "undefined" ? ".list_product pre," : strTooltipProductOb + ".list_product pre,");
-		strTooltipProductOb= (typeof(strTooltipProductOb) == "undefined" ? ".list_order_item pre," : strTooltipProductOb + ".list_order_item pre,");
-		strTooltipProductOb= (typeof(strTooltipProductOb) == "undefined" ? ".list_new_product pre," : strTooltipProductOb + ".list_new_product pre,");
-		strTooltipProductOb= (typeof(strTooltipProductOb) == "undefined" ? ".list-item pre," : strTooltipProductOb + ".list-item pre,");
-		strTooltipProductOb= (typeof(strTooltipProductOb) == "undefined" ? ".carousel-wrap pre," : strTooltipProductOb + ".carousel-wrap .item pre,");
-		strTooltipProductOb= (typeof(strTooltipProductOb) == "undefined" ? ".carousel-wrap pre," : strTooltipProductOb + ".carousel-wrap .item pre,");
-		jQuery(window).load(function(){ tooltipProduct();tooltipVendor();});
-
-		var isIE		= (navigator.userAgent.toLowerCase().indexOf("msie") == -1 ? false : true);
-		var isIE6	= (navigator.userAgent.toLowerCase().indexOf("msie 6") == -1 ? false : true);
-		var isIE7	= (navigator.userAgent.toLowerCase().indexOf("msie 7") == -1 ? false : true);
-		var isChrome= (navigator.userAgent.toLowerCase().indexOf("chrome") == -1 ? false : true);
-		*/
-		</script>
-		<!--<script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>-->
-		<script type="text/javascript">
-		  /*var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-32342542-1']);
-		  _gaq.push(['_trackPageview']);
-		  (function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();*/
-		</script>
+		
 	</head>
 <?php 
 if(!isset($objmod)) $objmod = new CLS_MODULE();
@@ -168,29 +143,16 @@ if(!isset($objmod)) $objmod = new CLS_MODULE();
 					<div class="fb-like" data-href="<?php echo WEBSITE;?>" data-send="true" data-width="300" data-show-faces="true" data-font="tahoma"></div>
 			</div> 
 			<div id="main-content" class="main">
-					<div class="clearfix content-content1 user">
-						<?php 
-                            include_once("modules/mod_latestpro/brow/giamgia.php");
-                            $this->loadModule("user1"); 
+                        <div class="clearfix content-content1 user">
+                        <?php 
+                        include_once("modules/mod_latestpro/brow/giamgia.php");
+                        $this->loadModule("user1"); 
                         ?>
-						<div class="module mod-comment">
-							<h2>Cảm nhận khách hàng!</h2>
-							<div class="content">
-								<?php if(!isset($objcom))
-									$objcom= new CLS_COMM();
-									$objcom->getList(" order by `comm_id` desc limit 0,1 ");
-									$rows=$objcom->Fecth_Array();
-									echo '<p><span>'.$rows["username"].':</span><a href="#" class="hiencom">'.Substring(($rows["content"]),0,20).'</span></p>'; unset($objcom);
-								?>
-							</div>
-							<a class="writecontact" href="#">Viết góp ý</a>
-                                                        
-						</div>
-					</div> 
-					<?php 
-					include_once("modules/layout_.php");
-					//$this->loadModule("left");
-                    include_once("modules/mod_catalog/brow/brow3.php"); ?>
+                        </div> 
+                        <?php 
+                        include_once("modules/layout_.php");
+                        //$this->loadModule("left");
+                        include_once("modules/mod_catalog/brow/brow3.php"); ?>
 			</div>
 			<?php } else { ?>
 				<?php $this->loadComonent();?>

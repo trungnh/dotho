@@ -4,7 +4,7 @@
         $objproduct->Name = "Tên sản phẩm mới";
         $objproduct->Add_new();
         $proid = $objproduct->lastProId;
-        $_SESSION['CANCELNEWID'] = $objproduct->lastProId;
+        $_SESSION['NEWID'] = $proid;
 ?>
 <div id="action">
  <script language="javascript">
@@ -220,3 +220,8 @@ $(document).ready(function() {
 		</table>
 	</fieldset>
 </div>
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery('.close').attr('href', '<?php echo "index.php?com=".COMS."&task=cancel&id=".$proid;?>');
+    });
+</script>
