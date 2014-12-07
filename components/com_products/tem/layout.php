@@ -42,6 +42,9 @@
 			<span class="regular-price" id="product-price-new">
 			<span class="price">'.number_format($objproduct->Cur_price).'&nbsp;₫</span></span>
 			<span class="VAT-label"> (VAT: +10%)</span>';
+                if(number_format($objproduct->Cur_price)==0) 
+                    $gia = '<span class="regular-price" id="product-price-new">
+                        <span class="price">Giá: Liên hệ</span></span>';
 	}
 ?>
 <div style="overflow: visible;" class="col-main">                       

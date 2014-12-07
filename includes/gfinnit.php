@@ -1,6 +1,6 @@
 <?php
 	// innit host info
-	define("HOST_URL","http://localhost/dotho/");
+	define("HOST_URL","http://dothosondong.us/");
 	define("HOSTNAME","localhost");
 	define("DB_USERNAME","root");//dotho
 	define("DB_PASSWORD","");//2Xbul=jm2pSc
@@ -13,6 +13,6 @@
 	define("Meta_KEY","Đồ thờ Sơn Đồng,Đồ thờ sơn đồng,đồ thờ sơn đồng,do tho son dong");
 	
 	
-	define("URLEDITOR","http://localhost/dotho/");
-	define("WEBSITE","http://localhost/dotho/");
+	define("URLEDITOR","http://dothosondong.us/");
+	define("WEBSITE","http://dothosondong.us/");
 ?>

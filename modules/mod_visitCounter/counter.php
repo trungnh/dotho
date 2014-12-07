@@ -72,3 +72,9 @@ fclose($open1);
 //echo 'Tong so luot truy cap: '.($all+100000);
 
 ?>
+<h3>Thống kê truy cập</h3>
+<div class="content box-module">
+    <?php //$this->loadModule("user6");?>
+    <p>Hiện có <span> <?php echo $online+206; ?> </span> khách truy cập</p>
+    <p>Số lượt truy cập : <span><?php echo $all;?></span></p>
+</div>

@@ -168,13 +168,13 @@ $(document).ready(function() {
 
 		<?php }
 		else
-		echo '<a href="index.php?com=event_detail&task=add&proid='.$proid.'">Gán sự kiện</a>';
+		echo '<a class="event" href="#">Gán sự kiện</a>';
 		?>
 	</fieldset>
   <br />
 	<fieldset>
 		<legend><strong>Ảnh sản phẩm</strong></legend>
-			<a href="index.php?com=images&task=add&proid=<?php echo $proid; ?>">Thêm ảnh sản phẩm</a>
+			<a class="image-add" href="#">Thêm ảnh sản phẩm</a>
 		<table width="100%" border="0" cellspacing="0" cellpadding="3" class="list">
 			<tr class="header">
 				<td>STT</td>
@@ -204,7 +204,7 @@ $(document).ready(function() {
 	<br />
 	<fieldset>
 		<legend><strong>Thông số kĩ thuật</strong></legend>
-			<a href="index.php?com=property&task=add&proid=<?php echo $proid; ?>">Thêm thông số kĩ thuật sản phẩm</a>
+			<a class="property-add" href="#">Thêm thông số kĩ thuật sản phẩm</a>
 		<table width="100%" border="0" cellspacing="0" cellpadding="3" class="list">
 			<tr class="header">
 				<td>STT</td>
@@ -233,3 +233,22 @@ $(document).ready(function() {
 		</table>
 	</fieldset>
 </div>
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery('.image-add').click(function(){
+            var id = <?php echo $proid?>;
+            jQuery('#frm_action').attr('action','index.php?com=products&task=save&con="images"&id='+id);
+            jQuery('#frm_action').submit();
+        });
+        jQuery('.property-add').click(function(){
+            var id = <?php echo $proid?>;
+            jQuery('#frm_action').attr('action','index.php?com=products&task=save&con=property&id='+id);
+            jQuery('#frm_action').submit();
+        });
+        jQuery('.event').click(function(){
+            var id = <?php echo $proid?>;
+            jQuery('#frm_action').attr('action','index.php?com=products&task=save&con=event_detail&id='+id);
+            jQuery('#frm_action').submit();
+        });
+    });
+</script>

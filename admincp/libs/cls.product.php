@@ -16,7 +16,8 @@
 			"Unit"=>"",
                         "Sale"=>"0",
 			"LangID"=>"0",
-			"IsActive"=>"1"
+			"IsActive"=>"1",
+                        "isEdit"=>"0"//create column in db isedt default=1
 		);
                 var $lastProId;
 		var $result;
@@ -213,10 +214,10 @@
 		function Add_new(){
 			$objdata=new CLS_MYSQL;
 			$objdata->Query("BEGIN");
-			$sql="INSERT INTO tbl_products (`video`,`cata_id`,`iscan`,`joindate`,`creator`,`cur_price`,`old_price`,`quantity`,`isactive`,`sale`) VALUES ";
+			$sql="INSERT INTO tbl_products (`video`,`cata_id`,`iscan`,`joindate`,`creator`,`cur_price`,`old_price`,`quantity`,`isactive`,`sale`,`isedit`) VALUES ";
 			$sql.="('".addslashes($this->pro_product["Video"])."','".$this->pro_product["CataID"]."','".$this->pro_product["Iscan"]."','";
 			$sql.=$this->pro_product["Joindate"]."','".$this->pro_product["Creator"]."','".$this->pro_product["Cur_price"]."','";
-			$sql.=($this->pro_product["Old_price"])."','".($this->pro_product["Quantity"])."','".$this->pro_product["IsActive"]."','".$this->pro_product["Sale"]."')";
+			$sql.=($this->pro_product["Old_price"])."','".($this->pro_product["Quantity"])."','".$this->pro_product["IsActive"]."','".$this->pro_product["Sale"]."','".$this->pro_product["isEdit"]."')";
 			$result=$objdata->Query($sql);
                         
 			$proid=$objdata->LastInsertID();
@@ -238,14 +239,15 @@
 			$objdata->Query("BEGIN");
 			$sql="UPDATE tbl_products SET `cata_id`='".$this->pro_product["CataID"]."', 
 										 `iscan`='".$this->pro_product["Iscan"]."',
-                                         `sale`='".$this->pro_product["Sale"]."', 
+                                                                                `sale`='".$this->pro_product["Sale"]."', 
 										 `joindate`='".$this->pro_product["Joindate"]."',
 										 `video`='".$this->pro_product["Video"]."',
 										 `creator`='".$this->pro_product["Creator"]."',
 										 `cur_price`='".($this->pro_product["Cur_price"])."',
 										 `old_price`='".($this->pro_product["Old_price"])."',
 										 `quantity`='".($this->pro_product["Quantity"])."',
-										 `isactive`='".$this->pro_product["IsActive"]."' 
+										 `isactive`='".$this->pro_product["IsActive"]."',
+                                                                                  `isedit`='1'
 									WHERE `pro_id`='".$this->pro_product["ID"]."'";
 			$result = $objdata->Query($sql);
                         

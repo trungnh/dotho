@@ -484,7 +484,7 @@ function selectFile(index)
 	
 	//------------------------- ntt add ---------------------
 	
-	sFile_RelativePath = "http://dothosondong.us/images"+ sFile_RelativePath;
+	sFile_RelativePath = "http://www.dothosondong.us/images"+ sFile_RelativePath;
 	document.getElementById("inpSource").value = sFile_RelativePath;
 	
 	//--------------------------ntt end -------------

@@ -1,21 +1,26 @@
 <?php
 	defined("ISHOME") or die("Can't acess this page, please come back!");
-	define("COMS","products");
+        define("COMS","products");
 	define("THIS_COM_PATH",COM_PATH."com_".COMS."/");
+        
+        if(isset($_GET['task'])&&$_GET['task']=="save"){
+            include(THIS_COM_PATH."tem/save.php");
+        }
+	
 	// Begin Toolbar
 	include_once(LAG_PATH."en/lang_products.php");
 	$objlag_pro=new LANG_PRODUCTS;
 	
 	$title_manager=$objlag_pro->PRODUCT_MANAGER;
-	if(isset($_GET["task"]) && $_GET["task"]=="add")
-		$title_manager = $objlag_pro->PRODUCT_MANAGER_ADD;
-	if(isset($_GET["task"]) && $_GET["task"]=="edit")
+	if(isset($_GET["task"]) && $_GET["task"]=="edit"){
 		$title_manager = $objlag_pro->PRODUCT_MANAGER_EDIT;
-		
+                if(isset($_SESSION['addnew']))
+                    $title_manager = $objlag_pro->PRODUCT_MANAGER_ADD;
+        }
 	require_once("includes/toolbar.php");
 	// End toolbar
 	$objproduct=new CLS_PRODUCTS();
-
+	
 	if(isset($_POST["txttask"]) && $_POST["txttask"]==1)
 	{
 		$objproduct->Name=addslashes($_POST["txtname"]);
@@ -31,7 +36,7 @@
 		$objproduct->Old_price=addslashes($_POST["txtoldprice"]);
 		$objproduct->Cur_price=addslashes($_POST["txtcurprice"]);
         
-                $objproduct->Sale=round(100-(((int)$_POST["txtcurprice"] / (int)$_POST["txtoldprice"])*100));
+        $objproduct->Sale=round(100-(((int)$_POST["txtcurprice"] / (int)$_POST["txtoldprice"])*100));
         
 		$sproduct=addslashes($_POST['txtintro']);
 		$objproduct->Intro=$sproduct;
@@ -46,18 +51,14 @@
 		}
 		//
 		
-		if(isset($_SESSION['NEWID']))
+		if($objproduct->ID=="-1")
 		{
-                        $objproduct->ID = $_SESSION['NEWID'];
-                        unset($_SESSION['NEWID']);
-			$result_action = $objproduct->Update();
+			$result_action = $objproduct->Add_new();
 			if(!$result_action)
 				echo "<script language=\"javascript\">window.location='index.php?com=".COMS."&mess=A02'</script>";
 			else	
 				echo "<script language=\"javascript\">window.location='index.php?com=".COMS."&mess=A01'</script>";
-		
-                        return;
-                }
+		}
 		else{
 			$result_action = $objproduct->Update();
 			if(!$result_action)
@@ -113,9 +114,10 @@
 	{
 		case "add"	: include(THIS_COM_PATH."tem/add.php"); 	break;
 		case "edit"	: include(THIS_COM_PATH."tem/edit.php");	break;
-                case "cancel"	: include(THIS_COM_PATH."tem/cancel.php"); 	break;
 		case "active"	: include(THIS_COM_PATH."tem/active.php");	break;
 		case "delete"	: include(THIS_COM_PATH."tem/delete.php");	break;
+                case "cancel"	: include(THIS_COM_PATH."tem/cancel.php");	break;
+                case "save"	: include(THIS_COM_PATH."tem/save.php");	break;
 		default: include(THIS_COM_PATH."tem/list.php");
 	}
 	// close object

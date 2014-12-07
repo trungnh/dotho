@@ -217,6 +217,50 @@ class CLS_CATE{
 			$this->ListCategory($minus_catid,$cur_parid,$catid,$level,$strwhere);
 		}
 	}
+	/*
+	function getUserDownOnly($id=0){
+		$strWhere = '';
+		if($id!=0){
+			$strWhere = " WHERE role_id =$id";
+		}
+		$sql = "SELECT downonlycat_id FROM role".$strWhere;
+		//echo $sql;die;
+		$this->result = $this->Query($sql);
+		
+		$_catArr = array();
+		if($this->Numrows()>0) {
+			while($rows=$this->FetchArray()){
+				$_catArr = explode(',',$rows['downonlycat_id']);
+			}
+		}
+		
+		return $_catArr;
+	}
+	function getUserEditable($id){
+		$index = 'editablecat_id';
+		$strWhere = '';
+		if($id!=0){
+			$strWhere = " WHERE role_id =$id";
+		}
+		$sql = "SELECT editablecat_id FROM role".$strWhere;
+		if($id==1){
+			$sql = "SELECT cat_id FROM catalog";
+			$index = 'cat_id';
+		}
+		$this->result = $this->Query($sql);
+		$_catArr = array();
+		if($this->Numrows()>0) {
+			while($rows=$this->FetchArray()){
+				if($id==1)
+					array_push($_catArr,$rows[$index]);
+				else
+					$_catArr = explode(',',$rows[$index]);
+			}
+		}
+		return $_catArr;
+	}
+	*/
+	
 	function Numrows() { 
 		if(mysql_num_rows($this->result))
 			return @mysql_num_rows($this->result);

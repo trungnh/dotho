@@ -288,7 +288,7 @@ a.addcart{ float: right; clear:both; background: #f26622; color: #fff; font-weig
     float: left;
 }
 .information {
-    background: url("../images/bg_reg.png") no-repeat scroll left top transparent;
+    
     float: left;
     width: 500px;  color: #f26622;
 }

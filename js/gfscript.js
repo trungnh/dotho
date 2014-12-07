@@ -199,7 +199,7 @@ function openBoxAddPro(url)
 
         {
             document.getElementById("shopcart").innerHTML=xmlhttp.responseText;
-            window.location="http://dothosondong.us/viewcart.html";
+            window.location="http://www.dothosondong.us/viewcart.html";
         }
     }
 xmlhttp.open("GET",url,true);

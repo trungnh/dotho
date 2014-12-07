@@ -77,6 +77,9 @@
 			<span class="regular-price" id="product-price-new">
 			<span class="price">'.number_format($objproduct->Cur_price).'&nbsp;₫</span></span>
 			<span class="VAT-label"> (VAT: +10%)</span>';
+                if(number_format($objproduct->Cur_price)==0) 
+                    $gia = '<span class="regular-price" id="product-price-new">
+                        <span class="price">Giá: Liên hệ</span></span>';
 	}
 ?>
 <div style="overflow: visible;" class="col-main">                       
@@ -143,17 +146,15 @@
 							<div class="short-description contact " style="padding-top:20px;padding-bottom: 0px;">                                                        
 								<p>
 									Hỗ trợ trực tuyến:
-									<a href="ymsgr:SendIM?minhlovely159"  title="Mua hàng"><img src="<?php echo WEBSITE; ?>images/yahoo.png" alt="Mua hàng" /></a>
-									<a href="ymsgr:SendIM?loveforever011085" title="Mua hàng"><img src="<?php echo WEBSITE; ?>images/yahoo.png" alt="Mua hàng" /></a>
-									<a href="mailto:muahang@tienichgiadinh.vn" title="Mua hàng"><img src="<?php echo WEBSITE; ?>images/email.gif" alt="Mua hàng" /></a>
+									<a href="mailto:khanhhungdj@gmail.com" title="Mua hàng"><img src="<?php echo WEBSITE; ?>images/email.gif" alt="Mua hàng" /></a>
 					
 									
 								</p>
 								<span class="email-information">
-									Email:<a href="mailto:muahang@tienichgiadinh.vn">muahang@tienichgiadinh.vn</a></span>
+									Email:<a href="mailto:muahang@tienichgiadinh.vn">khanhhungdj@gmail.com</a></span>
 								<p>
 									<img src="<?php echo WEBSITE; ?>images/icon_phone.png" height="13px" width="16px" />&nbsp;
-									Điện thoại: <span class="">Hotline: 0977 703 252 - 0984 661 545 </span>
+									Điện thoại: <span class="">Hotline: 0986.957.881 </span>
 								</p>
 								<div>                                                        	
 									<div class="clear"></div>

@@ -1,6 +1,6 @@
 <?php
 // define path to dirs
-	define("SITE_NAME","http://glowfuture.com/");
+	define("SITE_NAME","http://www.dothosondong.us/");
 	define("ROOT_PATH",""); 
 	define("TEM_PATH",ROOT_PATH."templates/");
 	define("COM_PATH",ROOT_PATH."components/");

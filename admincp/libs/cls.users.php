@@ -135,7 +135,7 @@ class CLS_USERS{
 			return;
 		$s=date("i")-date("i",strtotime($rows["lastlogin"]));
 		//echo ($s);
-		if($s>=300 || $s<-300){
+		if($s>=1000 || $s<-1000){
 			$this->LOGOUT();
 			echo "<p align=\"center\">Hệ thống tự động đăng xuất sau 60 phút. Bạn vui lòng đăng nhập lại.</p>";
 		}
@@ -173,15 +173,7 @@ class CLS_USERS{
 		$objdata->Query($sql);
 		$this->num_rows=$objdata->Numrows();
 	}
-	function checkUserExists($user){
-		$sql = "select * from tbl_member where username ='$user'";
-		$objdata=new CLS_MYSQL();
-		$objdata->Query($sql);
-		if($objdata->Numrows()>0) {
-			return true;
-		}
-		return false;
-	}
+
 	function listTableMember($strwhere="",$page){
 		$star=($page-1)*MAX_ROWS;
 		$leng=MAX_ROWS;

@@ -28,9 +28,13 @@
             <li><a class="addnew" href="index.php?com=<?php echo COMS;?>&task=add" title="<?php echo MADDNEW;?>"><?php echo MADDNEW;?></a></li>
             <li><a class="delete" href="#" onclick="javascript:if(confirm('Bạn có chắc chắn muốn xóa thông tin này không?')){dosubmitAction('frm_menu','delete'); }" title="<?php echo MDELETE;?>"><?php echo MDELETE;?></a></li>
             <?php }else{?>
-				
+            <?php 
+                if(COMS=="products"&&isset($_GET['proid'])){
+                    $_closeUrl = "products&task=cancel&id=".$_GET['proid'];
+                }
+            ?>
             <li><a class="save"  href="#" onclick="dosubmitAction('frm_action','save');" title="<?php echo MSAVE;?>"><?php echo MSAVE;?></a></li>
-            <li><a class="close"  href="index.php?com=<?php echo COMS;?>" title="<?php echo MCLOSE;?>"><?php echo MCLOSE;?></a></li>
+            <li><a class="close"  href="index.php?com=<?php echo $_closeUrl;?>" title="<?php echo MCLOSE;?>"><?php echo MCLOSE;?></a></li>
             <li><a class="help"  href="index.php?com=<?php echo COMS;?>&task=help" title="<?php echo MHELP;?>"><?php echo MHELP;?></a></li>
         <?php }
 		}else{ 

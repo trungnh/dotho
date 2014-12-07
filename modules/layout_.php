@@ -44,6 +44,9 @@
 						<span class="regular-price" id="product-price-new">
 						<span class="price">'.number_format($rows["cur_price"]).'&nbsp;₫</span></span>
 						<span class="VAT-label"> (VAT: +10%)</span>';
+                                        if(number_format($rows["cur_price"])==0) 
+                                            $gia = '<span class="regular-price" id="product-price-new">
+                                                <span class="price">Giá: Liên hệ</span></span>';
 				}
 				$imagethumb=$objproduct->showProImagesThumb($rows["pro_id"]);	
 				$image=$objproduct->showProImages($rows["pro_id"]);

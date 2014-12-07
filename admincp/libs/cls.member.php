@@ -81,8 +81,8 @@ class CLS_MEMBER extends CLS_MYSQL{
 		return $flag;
 	}
 	function isLogin(){
-		if(isset($_SESSION["IGFISLOGIN"]))
-			$this->autoLogout($_SESSION["IGFUSERLOGIN"]);
+		//if(isset($_SESSION["IGFISLOGIN"]))
+			//$this->autoLogout($_SESSION["IGFUSERLOGIN"]);
 		if(isset($_SESSION["IGFISLOGIN"]) && $_SESSION["IGFISLOGIN"]==true)
 		{
 			$this->updateLogin($_SESSION["IGFUSERLOGIN"],1);
